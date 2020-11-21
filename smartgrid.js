@@ -8,9 +8,11 @@ module.exports = {
         fields: "10px",
     },
     breakPoints: {
+        xl: {
+            width: "1280px"
+        },
         lg: {
-            width: "1024px",
-            fields: "10px"
+            width: "1024px"
         },
         md: {
             width: "920px"            
@@ -19,7 +21,7 @@ module.exports = {
             width: "768px"
         },
         xs: {
-            width: "576px"
+            width: "480px"
         },
         xxs: {
             width: "320px"

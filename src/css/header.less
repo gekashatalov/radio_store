@@ -20,16 +20,55 @@
     }
     &_link{
         .size(5);
+        .size-xl(6);
+        .size-md(4);
+        .size-sm(12);
+        .md-block({
+            flex-direction: column;
+        });
+        .sm-block({
+            flex-direction: row;
+        });
+        .xs-block({
+            flex-direction: column;
+        });
         display: flex;
         justify-content: start;
         flex-wrap: nowrap;
     }
+
+    &_info{
+        .sm-block({
+            flex-direction: column;
+
+        })
+    }
     
     &_main{
+        .size-lg(6);
+        .size-md(12);
+        .size-sm(6);
+        .size-xs(8);        
     }
     &_title{
         padding-left: 15px;
         .size(4);
+        .size-lg(6);
+        .size-md(12);
+        .size-sm(6);
+        .size-xs(12);
+        .md-block({
+            border-top: 1px solid #3b3b3b3b;
+            border-left: none;
+        });
+        .sm-block({
+            border-top: none;
+            border-left: 1px solid #3b3b3b3b;
+        });
+        .xs-block({
+            border-top: 1px solid #3b3b3b3b;
+            border-left: none;
+        });
         border-left: 1px solid #3b3b3b3b;
     }
 
@@ -53,15 +92,24 @@
 
     &_contact{
         .size(5);
+        .size-xl(6);
+        .size-md(7);
+        .size-sm(12);
+        .sm-block({
+        });
+        display: flex;
+        // min-height: 100px;
+            justify-content: space-around;
     }
 
     &_phones{
         .size(4);
         display: flex;
         flex-direction: column;
+        justify-content: center;
 
         &_time{
-            margin-top: 18px;
+            // margin-top: 18px;
             display: flex;
             flex-direction: row;
 
@@ -93,8 +141,50 @@
             border-bottom: 2px dashed  #A9A9A9;
             }
             img{
+                cursor: pointer;
                 margin-left: 5px;
             }
+        }
+    }
+
+    &_marks{
+        .size(4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        div {
+            margin: 5px 0;
+            span{
+                color:  #A9A9A9;
+                font-size: 16px;
+                border-bottom: 2px dashed  #A9A9A9;
+            }
+            
+            i{
+                width: 16px;
+            }
+        }
+    }
+
+    &_address{
+        margin:0 0 0 16px !important;
+    }
+
+    &_basket{
+        .size(4);
+        display: flex;
+        background-color:#8ECF04 ;
+        min-height: 100px;
+        height: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        color: #ffffff;
+        font-size: 16px;
+
+        span span{
+            font-weight: 300;
+            font-size: 12px;
         }
     }
     
