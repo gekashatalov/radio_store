@@ -14,12 +14,19 @@
         &:active{
             color: #000000;
         }
+
+        &:last-child{
+            margin-right: 0;
+        }
     }
-    hr{
-        .wrapper-full();
+
+    &_signin{
+        margin-right: 0 !important;
+        justify-content: flex-end;
     }
+    
     &_link{
-        .size(5);
+        .size(6);
         .size-xl(6);
         .size-md(4);
         .size-sm(12);
@@ -48,11 +55,12 @@
         .size-lg(6);
         .size-md(12);
         .size-sm(6);
-        .size-xs(8);        
+        .size-xs(8);  
+        margin: 0 !important;      
     }
     &_title{
         padding-left: 15px;
-        .size(4);
+        .size(4.5);
         .size-lg(6);
         .size-md(12);
         .size-sm(6);
@@ -98,8 +106,8 @@
         .sm-block({
         });
         display: flex;
-        // min-height: 100px;
-            justify-content: space-around;
+        justify-content: space-between;
+        margin-right: 0 !important;
     }
 
     &_phones{
@@ -174,7 +182,8 @@
     &_basket{
         .size(4);
         display: flex;
-        background-color:#8ECF04 ;
+        background: #8ECF04 ;
+        // background-image: url(../img/111.png);
         min-height: 100px;
         height: 100%;
         align-items: center;
@@ -187,5 +196,119 @@
             font-size: 12px;
         }
     }
+
+    &_catalog{
+        .xs-block({
+            flex-direction: column-reverse;
+        });
+        &-trigger{
+        .lg-block({
+            width: 50%;
+        });
+        .sm-block({
+            width: 60%;
+        });
+        .xs-block({
+            width: 100%;
+        });
+        width: 25%;
+        display: flex;
+        height: 60px;
+        background-color: #F76C06;
+        color: #FFFFFF;
+        font-size: 20px;
+        text-transform: uppercase;
+        align-items: center;
+        margin: 0;
+        cursor: pointer;
+        }
+
+        &-buter{
+            display: flex;
+            box-sizing: border-box;
+            width: 60px;
+            height: 60px;
+            border-right: 1px solid #C45300;
+            align-items: center;
+            justify-content: center;
+            margin-right: 13px;
+
+            span{
+                width: 28px;
+                height: 3px;
+                background-color: #fff;
+                position: relative;
+                transition: all 0.6s;
+            }
+            &>span:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -10px;
+                width: 28px;
+                height: 3px;
+                background-color:#fff;
+                transition: all 0.6s;
+            }
+        
+            &>span:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: 28px;
+                height: 3px;
+                background-color: #fff;
+                transition: all 0.6s;
+            }
+            &>span.open {
+                // transform: translateX(-50px);
+                background: transparent;
+            }
+        
+            &>span.open:after {
+                transform: rotate(-45deg) translate(0px, -14px);
+            }
+        
+            &>span.open:before {
+                transform: rotate(45deg) translate(0px, 14px);
+            }
+            
+        }
+
+        &-search{
+            .lg-block({
+                width: 50%;
+            });
+            .sm-block({
+                width: 40%;
+            });
+            .xs-block({
+                width: 100%;
+            });
+            width: 75%;
+            height: 60px;
+            margin: 0;
+            &>input{
+                width: 100%;
+                height: 100%;
+                border: 1px solid #CCCCCC;
+                font-size: 18px;
+                color: #A9A9A9;
+                padding-left: 20px;
+            }
+        }
+    }
     
+}
+.goods_count{
+    display: flex;
+    padding: 12px 0 0 3px;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+    width: 66px;
+    height: 66px;
+    background: url(../img/basket.svg) no-repeat ;
+    z-index: 10;
 }
