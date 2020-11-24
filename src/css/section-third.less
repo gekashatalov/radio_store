@@ -1,0 +1,145 @@
+.best__deals_header{
+    margin-top:50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    &-title{
+        .col();
+        display: block;
+        flex-wrap: nowrap;
+        width: 365px;
+        font-size: 36px;
+        font-weight: 300;
+
+    }
+
+    span.horizontal_line{
+        .col();
+        position: relative;
+        top: 25px;
+        display: flex;
+        flex-grow: 1;
+        height: 2px;
+        background-color: #8ECF04;
+    }
+
+    button{
+        background-color: initial;
+        border: 1px solid #8ECF04;
+        margin: 0 3px;
+    }
+}
+
+.best__deals_body{
+    display: flex;
+    flex-wrap: wrap;
+
+    &-card{        
+        .col();
+        .size(3);
+        .size-md(4);
+        .size-sm(6);
+        .size-xs(12);
+        position: relative;
+        margin: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #D7D7D7;
+        padding: 20px;
+        align-items: center;
+
+        &>.flag{
+            display: block;
+            position: absolute;
+            left: -1px;
+            top: 10px;
+
+            &>span{
+                font-size: 14px;
+                font-weight: 700;
+                color: #fff;
+                text-transform: uppercase;
+                position: relative;
+                left: -70px;
+                top: -7px;
+            };
+        }
+
+        &_description{
+            margin: 20px 0;
+            font-size: 16px;
+            color: #383838;
+        }
+
+        &_cost{
+            .row();
+            display: flex;
+            justify-content: space-between;
+            width: 100%;            
+        }
+
+        &-delivery{
+            // .col();
+            // .size(6);
+            margin-left: 0 !important;
+            font-size: 12px;
+            font-weight: 300;
+            color: #6B6B6B;
+            margin-bottom: 10px;
+
+        }
+
+        &-price{
+            margin-left: 0 !important;
+            font-size: 10px;
+            font-weight: 300;
+            color: #6B6B6B;
+
+            &-actual{
+                font-size: 16px;
+                font-weight: 400;
+                color: #709F01;
+            }
+        }
+
+        &-btns{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0 5px 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        &-buy{
+            width: 124px;
+            border: none;
+            border-radius: 6px;
+            background-color: #F76C06;
+            color: #fff;
+            height: 50px;
+            font-size: 18px;
+
+            .xl-block({
+                width: 100%;
+                margin-bottom: 15px;
+            });
+        }
+
+        &-buyClick{
+            // margin-top: 20px;
+            background: none;
+            border: none;
+            color: #6B6B6B;
+            font-size: 14px;
+            border-bottom: 1px dashed #6B6B6B;
+            height: 16px;
+
+            &>b{
+                color: #CC0619;
+            }
+
+        }
+    }
+}

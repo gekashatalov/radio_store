@@ -1,0 +1,202 @@
+.about_us{
+    .col();
+    .size(5);
+    .size-lg(6);
+    .size-sm(10);
+    .size-xs(12);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    &-content{
+        // .col();
+        // .size(11);
+        width: calc(100% - 95px);
+        display: flex;
+        position: relative;
+        left:30px;
+        top: 30px;
+        flex-direction: column;
+        border: 2px solid #ED1C24;
+        padding:  30px;
+
+        &::before{
+            content: url(../img/elips.svg);
+            display: block;
+            position: absolute;
+            top:-31px;
+            left: -34px;
+        }
+
+        &::after{
+            content: url(../img/elips1.svg);
+            display: block;
+            position: absolute;
+            top:3px;
+            left: -33px;
+        }
+
+        &>span{
+            color: #313131;
+            font-size: 16px;
+        }
+
+        
+    }
+
+    &-more{
+        background: none;
+        border: none;
+        color: #709F01;
+        font-size: 16px;
+        margin-top: 30px;
+        width: 130px;
+        padding: 0px;
+        text-align: left;
+     }
+}
+
+.section__fourth{
+    .sm-block({
+        justify-content: center;
+    });
+    &-title{
+        font-size: 30px;
+        font-weight: 300;
+        color: #303030;
+
+        &:after{
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: #8ECF04;
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+}
+
+.product_day{
+    .col();
+    .size(4);
+    .size-lg(6);
+    .size-sm(10);
+    .size-xs(12);
+    display: flex;
+    flex-direction: column;
+
+    &-card{
+        .col();
+        width: 100%;
+        margin: 10px 0;
+        // .row-flex();
+        display: flex;
+        flex-wrap: nowrap;
+        border: 1px solid #D7D7D7;
+        padding: 10px;
+
+        &_content{
+            .col();
+        }
+
+        &_description{            
+            font-size: 16px;
+            color: #383838;
+            margin-bottom: 10px;
+        }
+
+        &_cost{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 !important;
+            width: 100%;  
+        }
+
+        &-delivery{
+            font-size: 12px;
+            font-weight: 300;
+            color: #6B6B6B;
+            margin-bottom: 10px;
+        }
+
+        &-price{
+            margin-left: 0 !important;
+            font-size: 10px;
+            font-weight: 300;
+            color: #6B6B6B;
+
+            &-actual{
+                font-size: 16px;
+                font-weight: 400;
+                color: #709F01;
+            }
+        }
+    }
+}
+
+.usefulness{
+    .col();
+    .size(3);
+    .size-lg(6);
+    .size-sm(10);
+    .size-xs(12);
+    &__content{
+        display: flex;
+        flex-direction: column;
+
+        &-card{
+            .row();
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+
+            &-date{
+                .col();
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 4px solid #CC0619;
+                width:63px !important;
+                height: auto;
+                min-height: 83px;
+                margin-right: 0;
+
+                &-day{
+                    font-size: 34px;
+                    font-weight: 700;
+                    color: #303030;
+                }
+
+                &-month{
+                    font-size: 10px;
+                    color: #303030;
+                }
+            }
+
+            &-description{
+                .col();
+                // .size(8);
+                width: calc(100% - 93px);
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-between;
+
+                &-title{
+                    font-size: 18px;
+                    color: #303030;
+                    letter-spacing: 0px;
+                    font-weight: 700;
+                }
+
+                &-body{
+                    font-size: 12px;
+                    color:#313131;
+                    margin-top: auto;
+                    // position: relative;
+                    // bottom: 0px;
+                }
+            }
+        }
+    }
+}

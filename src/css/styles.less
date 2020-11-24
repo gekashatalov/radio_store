@@ -4,12 +4,30 @@
 @import "./header.less";
 @import "./section-first.less";
 @import "./section-second.less";
+@import "./section-third.less";
+@import "./section-fourth.less";
+@import "./footer.less";
 
 html, body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 };
+
+button{
+    position: relative;
+    cursor: pointer;
+    transition: all  0.2s ;
+
+    &:hover{
+        transform: translate(0, -2px);
+    }
+
+    &:active{
+        transform: translate(0, 0);
+    }
+}
+
 
 button:focus {
     outline: none;
