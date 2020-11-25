@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     &-box{
+        max-width: 100%;
         position: relative;
         top: 17px;
     }
@@ -17,6 +18,9 @@
     .lg-block({
         flex-direction: column;
         align-items: center;
+    });
+    .xs-block({
+        justify-content: space-around;
     });
     position: relative;
     color: #fff;
@@ -49,7 +53,7 @@
 
     &_date{
         .col();
-        margin-left: 14%;
+        margin-left: 10%;
         max-width: 470px;
         display: flex;
         flex-direction: column;
@@ -63,6 +67,9 @@
     }
 
     &_button{
+        .sm-block({
+            margin-top: 15px;
+        });
         margin-top: 34px;
         background: #F76C06;  
         height: 62px;
@@ -81,7 +88,10 @@
     letter-spacing: -15.98px;
     .xl-block({
         font-size: 200px;
-    })
+    });
+    .sm-block({
+        font-size: 180px;
+    });
 }
 
 .goods{
@@ -92,6 +102,7 @@
     });
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
     margin-right: 12%;
     max-width: 227px;
     padding-top: 170px;
@@ -114,6 +125,9 @@
 }
 
 .price{
+    .sm-block({
+        font-size: 40px;
+    });
     font-size: 55px;
     font-weight: 700;
 
@@ -126,13 +140,17 @@
     .col();
     display: flex;
     // height: 580px;
-    max-width: 880px;
+    max-width: 980px;
 }
 
 .image_goods{
     .col();
-    .size(8);
+    .size(7);
     display: flex;
     align-items: flex-end;
+    flex-shrink: 0;
+    .xs-block({
+        display:none;
+    });
     // height: 337px !important;
 }
