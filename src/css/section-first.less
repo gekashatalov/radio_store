@@ -1,11 +1,14 @@
 .section__first{
+    position: relative;
     height: 580px;
+    overflow: hidden ;
 }
 
 .slider{
     display: flex;
     justify-content: space-between;
     &-box{
+        overflow: hidden;
         max-width: 100%;
         position: relative;
         top: 17px;
@@ -22,13 +25,14 @@
     .xs-block({
         justify-content: space-around;
     });
-    position: relative;
+    position: absolute;
     color: #fff;
-    top:-580px;
+    top: 0;
+    left: 100%;
     width: 100%;
     height: 580px;
     margin: 17px 0;
-    background: url(../img/Эллипс\ 3.svg)  no-repeat 50%  50%,
+    background: url(../img/around.svg)  no-repeat 50%  50%,
                  transparent linear-gradient(90deg, #90CF00 0%, #06C0CC 100%) 0% 0% no-repeat padding-box;
 
     &_prev{
@@ -78,6 +82,10 @@
         font-size: 21px;
         color: #fff;
     }
+
+    &_showed{
+        left: 0;
+    }
 }
 
 .percent{
@@ -106,7 +114,6 @@
     margin-right: 12%;
     max-width: 227px;
     padding-top: 170px;
-    // color: #fff;
 
     &_description{
         font-size: 16px;
@@ -139,7 +146,6 @@
 .baner_goods{
     .col();
     display: flex;
-    // height: 580px;
     max-width: 980px;
 }
 
@@ -152,5 +158,4 @@
     .xs-block({
         display:none;
     });
-    // height: 337px !important;
 }

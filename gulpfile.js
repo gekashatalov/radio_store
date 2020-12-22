@@ -99,7 +99,7 @@ function grid(done) {
 }
 
 let build = gulp.series(clear,
-    gulp.parallel(styles, html, img, scripts));
+    gulp.parallel(styles, owl, html, img, scripts));
 
 gulp.task('build', build);
 gulp.task('grid', grid);

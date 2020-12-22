@@ -36,18 +36,17 @@
     flex-wrap: wrap;
 
     &-card{        
-        .col();
-        .size(3);
-        .size-md(4);
-        .size-sm(6);
-        .size-xs(12);
+        max-width: 310px;
         position: relative;
         margin: 10px 10px;
         display: flex;
         flex-direction: column;
         border: 1px solid #D7D7D7;
-        padding: 20px;
+        padding: 20px 15px;
         align-items: center;
+        .xs-block({
+            margin: 10px auto;
+        });
 
         &>.flag{
             display: block;
@@ -80,8 +79,6 @@
         }
 
         &-delivery{
-            // .col();
-            // .size(6);
             margin-left: 0 !important;
             font-size: 12px;
             font-weight: 300;
@@ -128,7 +125,6 @@
         }
 
         &-buyClick{
-            // margin-top: 20px;
             background: none;
             border: none;
             color: #6B6B6B;

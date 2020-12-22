@@ -7,11 +7,14 @@
 @import "./section-third.less";
 @import "./section-fourth.less";
 @import "./footer.less";
+@import "./owl.carousel.min.css";
+@import "./owl.theme.default.min.css";
 
 html, body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
 };
 
 button:not(.nav-trigger){
@@ -54,6 +57,7 @@ a {
 */
 .row {
     .row-flex();
+    // margin: 0;
 }
 
 .row_center {
@@ -83,5 +87,31 @@ img {
 .row_items {
     .row-flex();
     justify-content: space-around;
+}
+
+.table-catalog tbody, .table-catalog tr {
+    display: block;
+    
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.288);
+    z-index: 100;
+
+    &_open{
+        display: block;
+    }
+}
+
+
+.owl-carousel .owl-item img{
+    display: initial;
+    width: auto ;
 }
 
