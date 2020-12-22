@@ -6,6 +6,7 @@
         <title>Radio Store</title>
         <link rel="icon" href="./img/ColorOverlayLeft.svg">
         <link rel="stylesheet" href="./css/styles.css">
+        <?php include './data.php'; ?>
     </head>
     <body>
         <header class="header">
@@ -345,6 +346,7 @@
 
         <!-- Section third Best deals -->
 
+        
         <section class="wrapper  ">
             <div class="best__deals_header row-flex">
                 <span class="best__deals_header-title">
@@ -361,16 +363,17 @@
                 </div>
             </div>
             <div class="best__deals_body owl-carousel row-flex">
-                <div class="best__deals_body-card new" data-count="0">
+                <?php foreach($cards as $card):?>
+                <div class="best__deals_body-card <?=$card["class"]?>" data-count="0">
                     <div class="flag">
-                        <img src="./img/new.png" alt="">
-                        <span>Новый</span>
+                        <img src=<?=$card["labelImage"]?> alt="">
+                        <span><?=$card["label"]?></span>
                     </div>
                     <div class="best__deals_body-card_img">
-                        <img src="./img/goods.png" alt="">
+                        <img src=<?=$card["image"]?> alt="">
                     </div>
                     <div class="best__deals_body-card_description">
-                        <span>Автомобильный блок питания для ноутбука ASUS W5G00A 19V 3.42 A 5.5x2.5</span>
+                        <span><?=$card["description"]?></span>
                     </div>
                     <div class="best__deals_body-card_cost row" >
                         <div class="best__deals_body-card-delivery">
@@ -378,12 +381,12 @@
                             <span>Есть доставка</span>
                             <br>
                             <img src="./img/check_mark.svg" alt="">
-                            <span>В наличии 23 шт.</span>
+                            <span>В наличии <?=$card["availability"]?> шт.</span>
                         </div>
                         <div class="best__deals_body-card-price">
                             <span>Цена за шт.</span>
                             <br>
-                            <span class="best__deals_body-card-price-actual" data-price="190">190 грн</span>
+                            <span class="best__deals_body-card-price-actual" data-price=<?=$card["price"]?>><?=$card["price"]?> грн</span>
                         </div>
                     </div>
                     <div class="best__deals_body-card-btns">
@@ -391,96 +394,7 @@
                         <button class="best__deals_body-card-buyClick">Заказать в <b>1</b> клик</button>
                     </div>
                 </div>
-                <div class="best__deals_body-card promotion" data-count="0">
-                    <div class="flag">
-                        <img src="./img/promotion.png" alt="">
-                        <span>акция</span>
-                    </div>
-                    <div class="best__deals_body-card_img">
-                        <img src="./img/goods.png" alt="">
-                    </div>
-                    <div class="best__deals_body-card_description">
-                        <span>Автомобильный блок питания для ноутбука ASUS W5G00A 19V 3.42 A 5.5x2.5</span>
-                    </div>
-                    <div class="best__deals_body-card_cost row">
-                        <div class="best__deals_body-card-delivery">
-                            <img src="./img/delivery.svg" alt="">
-                            <span>Есть доставка</span>
-                            <br>
-                            <img src="./img/check_mark.svg" alt="">
-                            <span>В наличии 23 шт.</span>
-                        </div>
-                        <div class="best__deals_body-card-price">
-                            <span>Цена за шт.</span>
-                            <br>
-                            <span class="best__deals_body-card-price-actual" data-price="188.40">188,40 грн</span>
-                        </div>
-                    </div>
-                    <div class="best__deals_body-card-btns">
-                        <button class="best__deals_body-card-buy">КУПИТЬ</button>
-                        <button class="best__deals_body-card-buyClick">Заказать в <b>1</b> клик</button>
-                    </div>
-                </div>
-                <div class="best__deals_body-card" data-count="0">
-                    <div class="flag">
-                        <img src="./img/promotion.png" alt="">
-                        <span>акция</span>
-                    </div>
-                    <div class="best__deals_body-card_img">
-                        <img src="./img/goods.png" alt="">
-                    </div>
-                    <div class="best__deals_body-card_description">
-                        <span>Автомобильный блок питания для ноутбука ASUS W5G00A 19V 3.42 A 5.5x2.5</span>
-                    </div>
-                    <div class="best__deals_body-card_cost row">
-                        <div class="best__deals_body-card-delivery">
-                            <img src="./img/delivery.svg" alt="">
-                            <span>Есть доставка</span>
-                            <br>
-                            <img src="./img/check_mark.svg" alt="">
-                            <span>В наличии 23 шт.</span>
-                        </div>
-                        <div class="best__deals_body-card-price">
-                            <span>Цена за шт.</span>
-                            <br>
-                            <span class="best__deals_body-card-price-actual" data-price="50">50 грн</span>
-                        </div>
-                    </div>
-                    <div class="best__deals_body-card-btns">
-                        <button class="best__deals_body-card-buy">КУПИТЬ</button>
-                        <button class="best__deals_body-card-buyClick">Заказать в <b>1</b> клик</button>
-                    </div>
-                </div>
-                <div class="best__deals_body-card" data-count="0">
-                    <div class="flag">
-                        <img src="./img/new.png" alt="">
-                        <span>Новый</span>
-                    </div>
-                    <div class="best__deals_body-card_img">
-                        <img src="./img/goods.png" alt="">
-                    </div>
-                    <div class="best__deals_body-card_description">
-                        <span>Автомобильный блок питания для ноутбука ASUS W5G00A 19V 3.42 A 5.5x2.5</span>
-                    </div>
-                    <div class="best__deals_body-card_cost row">
-                        <div class="best__deals_body-card-delivery">
-                            <img src="./img/delivery.svg" alt="">
-                            <span>Есть доставка</span>
-                            <br>
-                            <img src="./img/check_mark.svg" alt="">
-                            <span>В наличии 23 шт.</span>
-                        </div>
-                        <div class="best__deals_body-card-price">
-                            <span>Цена за шт.</span>
-                            <br>
-                            <span class="best__deals_body-card-price-actual" data-price="188.40">188,40 грн</span>
-                        </div>
-                    </div>
-                    <div class="best__deals_body-card-btns">
-                        <button class="best__deals_body-card-buy">КУПИТЬ</button>
-                        <button class="best__deals_body-card-buyClick">Заказать в <b>1</b> клик</button>
-                    </div>
-                </div>
+                <?php endforeach ?>
             </div>
         </section>
 
@@ -612,6 +526,9 @@
                                 </span>
                             </div>
                             <div class="usefulness__content-card-description">
+                                <!-- <span class="usefulness__content-card-description-title">
+                                    
+                                </span> -->
                                 <span class="usefulness__content-card-description-body">
                                     Представляем Вашему вниманию видеообзор паяльнойстанции ...
                                 </span>
@@ -759,7 +676,7 @@
             <div class="block_basket">
                 <button class="backet-close"><img src="./img/icons/close.png" alt=""></button>
                 <div class="block_basket-goods">
-    
+
                 </div>
                 <div class="block_basket-control">
                     <span>
@@ -769,7 +686,7 @@
                     
                     <button class="block_basket-checkout">Оформить</button>            
                 </div>
-    
+
             </div>
             <div class="overlay"></div>
         </section>
